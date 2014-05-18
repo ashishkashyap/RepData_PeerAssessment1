@@ -71,7 +71,7 @@ for(i in 1:nrow(x=activityDataWithNAFilled)){
 modifiedTotalStepsByDate<-tapply(activityDataWithNAFilled$steps.x, activityDataWithNAFilled$date, FUN=sum)
 barplot(modifiedTotalStepsByDate, xlab="Date", ylab="Total Number of Steps")
 ```
-### Now calculating the mean and median
+### Now calculating the mean and median with the new set of data
 ```{r}
 averageNumberOfStepsPerDay <- mean(modifiedTotalStepsByDate)
 averageNumberOfStepsPerDay
