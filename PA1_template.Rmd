@@ -85,12 +85,5 @@ medianNumberOfStepsPerDay
 activityDates<-as.Date(activityData$date)
 dayOfTheWeek<-weekdays(activityDates)
 activityDataWithNAFilled<-cbind(activityDataWithNAFilled,dayOfTheWeek)
-for(i in 1:nrow(x=activityDataWithNAFilled)){
-    if(activityDataWithNAFilled$dayOfTheWeek == "Saturday" | activityDataWithNAFilled$dayOfTheWeek == "Sunday"){
-        activityDataWithNAFilled$dayOfTheWeek <- "Weekend"
-    }else{
-        activityDataWithNAFilled$dayOfTheWeek <- "Weekday"
-    }
-}
-activityDataWithNAFilled
+
 ```
